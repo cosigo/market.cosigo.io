@@ -1,0 +1,1398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="/shared/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>cosigo market — CIGO</title>
+  <meta name="description"
+    content="Official CIGO market-access token page with BNB Smart Chain contract details, wallet setup, logo assets, and links to official COSIGO resources.">
+  <meta name="robots" content="index,follow" />
+
+  <meta name="keywords" content="CIGO, cosigo market, BNB Smart Chain token, CIGO contract, CIGO logo, COSIGO">
+
+  <meta name="author" content="COSIGO">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://market.cosigo.io/">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="cosigo market — CIGO">
+  <meta property="og:description"
+    content="Official CIGO market-access token page with BNB Smart Chain contract details, wallet setup, logo assets, and links to official COSIGO resources.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CIGO">
+  <meta property="og:url" content="https://market.cosigo.io/">
+  <meta property="og:image" content="https://market.cosigo.io/shared/assets/icons/cigo_256.png">
+
+  <style>
+    :root {
+      --bg: #0a0c10;
+      --bg-2: #12151b;
+      --ink: #edf2f7;
+      --muted: #9aa5b5;
+      --line: rgba(255, 255, 255, 0.09);
+      --line-2: rgba(255, 255, 255, 0.05);
+
+      --amber: #ffb84d;
+      --amber-2: #ff8a3d;
+      --green: #47d18c;
+      --blue: #67a8ff;
+
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
+      --radius: 22px;
+      --max: 1180px;
+
+      --body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--body);
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(255, 184, 77, 0.05), rgba(255, 184, 77, 0) 18%),
+        linear-gradient(180deg, #0a0c10 0%, #0d1016 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .08));
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(10, 12, 16, 0.72);
+      border-bottom: 1px solid var(--line-2);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: lowercase;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--amber), var(--amber-2));
+      box-shadow: 0 0 24px rgba(255, 170, 64, 0.45);
+      flex: 0 0 auto;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      display: block;
+      object-fit: contain;
+      border-radius: 10px;
+      flex: 0 0 auto;
+      box-shadow: 0 0 18px rgba(255, 184, 77, 0.16);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .brand-title {
+      display: block;
+      color: var(--ink);
+      line-height: 1.05;
+    }
+
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    .nav {
+      width: 100%;
+    }
+
+    .nav a {
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 14px;
+      transition: .2s ease;
+    }
+
+    .nav a:hover {
+      color: var(--ink);
+      border-color: rgba(255, 184, 77, 0.35);
+      background: rgba(255, 184, 77, 0.06);
+    }
+
+
+
+    .hero {
+      padding: 56px 0 22px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr .9fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hero-card,
+    .panel,
+    .step {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.015));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card,
+    .panel {
+      padding: 28px;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -60px -60px auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(255, 184, 77, .18), rgba(255, 184, 77, 0) 68%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 184, 77, 0.18);
+      background: rgba(255, 184, 77, 0.06);
+      border-radius: 999px;
+      color: var(--amber);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: .92;
+      letter-spacing: -.04em;
+    }
+
+    .ticker {
+      display: inline-block;
+      margin-left: .12em;
+      color: var(--amber);
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(17px, 2.3vw, 22px);
+      line-height: 1.52;
+      color: #d8dee8;
+    }
+
+    .lead strong {
+      color: #fff;
+    }
+
+    .risk-note {
+      margin-top: 18px;
+      padding: 15px 16px;
+      border-left: 4px solid var(--amber);
+      border-radius: 14px;
+      background: rgba(255, 184, 77, 0.08);
+      color: #eadbc4;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      border: 1px solid var(--line);
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--amber), var(--amber-2));
+      color: #16110b;
+      border-color: transparent;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.03);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--ink);
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255, 184, 77, 0.35);
+      background: rgba(255, 184, 77, 0.06);
+    }
+
+    .status-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .status-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .status-head h2 {
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .live-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .live-dot::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: currentColor;
+      box-shadow: 0 0 16px currentColor;
+    }
+
+    .statbox {
+      display: grid;
+      gap: 10px;
+    }
+
+    .stat {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      padding: 14px 0;
+      border-top: 1px solid var(--line-2);
+    }
+
+    .stat:first-of-type {
+      border-top: 0;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .stat-value {
+      text-align: right;
+      font-weight: 700;
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--ink);
+      word-break: break-word;
+    }
+
+    .warning {
+      margin-top: 8px;
+      padding: 14px 14px 14px 16px;
+      border-left: 4px solid var(--amber);
+      background: rgba(255, 184, 77, 0.08);
+      color: #eadbc4;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .section {
+      padding: 18px 0 10px;
+    }
+
+    .section h3 {
+      margin: 0 0 16px;
+      font-size: 14px;
+      color: var(--muted);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .panel h4 {
+      margin: 0 0 10px;
+      font-size: 24px;
+      letter-spacing: -.02em;
+    }
+
+    .panel p {
+      margin: 0;
+      color: #cbd3de;
+      line-height: 1.65;
+    }
+
+    .pill {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 800;
+    }
+
+    .pill-market {
+      color: #16110b;
+      background: linear-gradient(135deg, var(--amber), var(--amber-2));
+    }
+
+    .pill-official {
+      color: #d8ecff;
+      background: rgba(103, 168, 255, 0.14);
+      border: 1px solid rgba(103, 168, 255, 0.22);
+    }
+
+    .compare {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .compare-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding-top: 12px;
+      border-top: 1px solid var(--line-2);
+    }
+
+    .compare-row:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .compare-row strong {
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .step {
+      position: relative;
+      padding: 22px;
+    }
+
+    .step-num {
+      width: 34px;
+      height: 34px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 184, 77, 0.12);
+      color: var(--amber);
+      border: 1px solid rgba(255, 184, 77, 0.18);
+      font-family: var(--mono);
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .step h4 {
+      margin: 0 0 8px;
+      font-size: 20px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #c9d2dc;
+      line-height: 1.65;
+    }
+
+    .token-panel {
+      padding: 24px 28px;
+    }
+
+    .token-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+
+    .token-head h4 {
+      margin: 0 0 8px;
+    }
+
+    .token-sub {
+      color: #cbd3de;
+      line-height: 1.6;
+      max-width: 760px;
+    }
+
+    .token-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .token-grid {
+      margin-top: 18px;
+      border-top: 1px solid var(--line-2);
+    }
+
+    .token-row {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 18px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line-2);
+    }
+
+    .token-label {
+      color: var(--muted);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .token-value {
+      color: var(--ink);
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    .token-value code {
+      display: inline-block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .token-address-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .copy-btn {
+      min-height: 40px;
+      padding: 0 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--ink);
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .copy-btn:hover {
+      border-color: rgba(255, 184, 77, 0.35);
+      background: rgba(255, 184, 77, 0.06);
+    }
+
+    .token-note {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(103, 168, 255, 0.08);
+      border: 1px solid rgba(103, 168, 255, 0.16);
+      color: #d9e7fb;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .wallet-setup {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    .wallet-setup .section-label {
+      display: inline-block;
+      margin-bottom: .75rem;
+      padding: .25rem .55rem;
+      border: 1px solid rgba(255, 255, 255, .18);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .72rem;
+      opacity: .82;
+    }
+
+    .wallet-setup h2 {
+      margin: 0 0 .75rem;
+      font-size: clamp(1.35rem, 2.2vw, 2rem);
+      line-height: 1.1;
+    }
+
+    .wallet-lead,
+    .wallet-note,
+    .wallet-status {
+      max-width: 60ch;
+    }
+
+    .wallet-card {
+      margin-top: 1.2rem;
+      padding: 1.1rem;
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: rgba(255, 255, 255, .03);
+    }
+
+    .wallet-row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: .8rem;
+      padding: .45rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .wallet-row:last-of-type {
+      border-bottom: 0;
+    }
+
+    .wallet-key {
+      text-transform: lowercase;
+      opacity: .72;
+    }
+
+    .wallet-value {
+      font-weight: 600;
+    }
+
+    .wallet-row-contract code {
+      display: inline-block;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      font-size: .95rem;
+    }
+
+    .wallet-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1rem;
+    }
+
+    .wallet-btn {
+      appearance: none;
+      border: 1px solid rgba(255, 255, 255, .22);
+      background: #111;
+      color: #fff;
+      padding: .78rem 1rem;
+      cursor: pointer;
+      font: inherit;
+      letter-spacing: .02em;
+    }
+
+    .wallet-btn:hover {
+      background: #1b1b1b;
+    }
+
+    .wallet-btn-secondary {
+      background: transparent;
+    }
+
+    .wallet-status {
+      min-height: 1.5em;
+      margin-top: .9rem;
+      opacity: .9;
+    }
+
+    @media (max-width: 720px) {
+      .wallet-row {
+        grid-template-columns: 1fr;
+        gap: .3rem;
+      }
+
+      .wallet-actions {
+        flex-direction: column;
+      }
+
+      .wallet-btn {
+        width: 100%;
+      }
+    }
+
+    .footer {
+      padding: 40px 0 70px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-card {
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .footer-card strong {
+      color: var(--ink);
+    }
+
+    @media (max-width: 980px) {
+      .topbar-inner {
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .compare-row,
+      .token-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .topbar-inner {
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .token-head {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .hero-card,
+      .panel,
+      .step,
+      .token-panel {
+        padding: 20px;
+      }
+
+      .nav {
+        width: 100%;
+      }
+
+      .nav a {
+        font-size: 13px;
+      }
+
+      .cta-row,
+      .token-actions {
+        flex-direction: column;
+      }
+
+      .btn,
+      .copy-btn {
+        width: 100%;
+      }
+    }
+
+    /* --- mobile layout fixes --- */
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 980px) {
+      .topbar-inner {
+        padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-grid,
+      .grid-2,
+      .flow,
+      .compare-row,
+      .token-row {
+        grid-template-columns: 1fr;
+      }
+
+      .token-head,
+      .status-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .token-address-wrap {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .hero-card,
+      .panel,
+      .step,
+      .token-panel {
+        padding: 20px;
+      }
+
+      .wrap {
+        width: min(calc(100% - 20px), var(--max));
+      }
+
+      .nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .nav a,
+      .btn,
+      .copy-btn,
+      .wallet-btn {
+        width: 100%;
+      }
+
+      .cta-row,
+      .token-actions,
+      .wallet-actions {
+        flex-direction: column;
+      }
+
+      .stat,
+      .wallet-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .stat-value {
+        text-align: left;
+      }
+
+      .wallet-row-contract code,
+      .token-value code,
+      #cigo-address,
+      #cigo-contract {
+        display: block;
+        width: 100%;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="https://market.cosigo.io/">
+        <img src="/shared/assets/icons/cigo_256.png" alt="CIGO token icon" class="brand-icon">
+        <span class="brand-text">
+          <span class="brand-title">cigo market</span>
+          <small>speculative access rail</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#contract">contract</a>
+        <a href="#what">what is this</a>
+        <a href="#difference">CIGO vs COSIGO</a>
+        <a href="#flow">how it works</a>
+        <a href="https://token.cosigo.io/">official token</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">market-access layer</div>
+          <h1>CIGO<span class="ticker">/market</span></h1>
+
+          <p class="lead">
+            CIGO is a speculative market-access token built for liquidity, price discovery, and low-fee participation.
+            <strong>Official COSIGO lives at token.cosigo.io.</strong>
+          </p>
+
+          <div class="risk-note">
+            CIGO is a speculative market-access token. If market participants lose money,
+            that is a consequence of speculative trading and market risk, not a promise or obligation of COSIGO.
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://token.cosigo.io/">go to official COSIGO</a>
+            <a class="btn btn-secondary" href="#contract">view contract details</a>
+            <a class="btn btn-secondary" href="#difference">see the difference</a>
+          </div>
+        </div>
+
+        <aside class="hero-card status-panel">
+          <div class="status-head">
+            <h2>status board</h2>
+            <div class="live-dot">mainnet live</div>
+          </div>
+
+          <div class="statbox">
+            <div class="stat">
+              <div class="stat-label">public name</div>
+              <div class="stat-value">cosigo market</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">symbol</div>
+              <div class="stat-value">CIGO</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">network</div>
+              <div class="stat-value">BNB Smart Chain</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">fixed supply</div>
+              <div class="stat-value">21,000,000</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">role</div>
+              <div class="stat-value">market access</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">destination</div>
+              <div class="stat-value">COSIGO</div>
+            </div>
+          </div>
+
+          <div class="warning">
+            This page is intentionally separate from the official COSIGO presentation.
+            CIGO is for market activity. COSIGO is the silver-referenced destination layer.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section wrap" id="contract">
+      <h3>contract</h3>
+
+      <div class="panel token-panel">
+        <div class="token-head">
+          <div>
+            <h4>CIGO token details</h4>
+            <div class="token-sub">
+              CIGO is live on BNB Smart Chain mainnet. Always verify the contract address directly
+              before buying, selling, sending, bridging, or adding the token to a wallet.
+            </div>
+          </div>
+        </div>
+
+        <div class="token-grid">
+          <div class="token-row">
+            <div class="token-label">Token name</div>
+            <div class="token-value">cosigo market</div>
+          </div>
+
+          <div class="token-row">
+            <div class="token-label">Symbol</div>
+            <div class="token-value">CIGO</div>
+          </div>
+
+          <div class="token-row">
+            <div class="token-label">Network</div>
+            <div class="token-value">BNB Smart Chain</div>
+          </div>
+
+          <div class="token-row">
+            <div class="token-label">Supply</div>
+            <div class="token-value">21,000,000 fixed at launch</div>
+          </div>
+
+          <div class="token-row">
+            <div class="token-label">Contract</div>
+            <div class="token-value">
+              <div class="token-address-wrap">
+                <code id="cigo-address">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
+                <button class="copy-btn" type="button"
+                  data-copy="0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="token-row">
+            <div class="token-label">Explorer</div>
+            <div class="token-value">
+              <a href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560" target="_blank"
+                rel="noopener">
+                View on BscScan
+              </a>
+            </div>
+          </div>
+
+          <div class="token-row">
+            <div class="token-label">Official COSIGO</div>
+            <div class="token-value">
+              <a href="https://token.cosigo.io/" target="_blank" rel="noopener">token.cosigo.io</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="token-actions">
+          <a class="btn btn-primary" href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
+            target="_blank" rel="noopener">
+            open BscScan
+          </a>
+          <a class="btn btn-secondary" href="/shared/assets/icons/cigo_first_stars_trans_32.svg"
+            download="cigo_first_stars_trans_32.svg">
+            CIGO SVG Download
+          </a>
+          <a class="btn btn-secondary" href="https://token.cosigo.io/" target="_blank" rel="noopener">
+            official COSIGO
+          </a>
+        </div>
+
+        <div class="token-note">
+          Use only the contract address shown on this page and on the official BscScan listing.
+          Do not rely on screenshots, reposts, or copied symbols alone.
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="what">
+      <h3>what this is</h3>
+      <div class="grid-2">
+        <article class="panel">
+          <span class="pill pill-market">cigo</span>
+          <h4>speculation rail</h4>
+          <p>
+            CIGO is designed for fast market exposure, cheap trading, and visible price action.
+            It is the access layer for people who arrive through speculative markets first.
+          </p>
+        </article>
+
+        <article class="panel">
+          <span class="pill pill-official">official</span>
+          <h4>not the final destination</h4>
+          <p>
+            CIGO is not presented as the backed settlement layer. Official COSIGO remains the serious token,
+            the reference layer, and the place where the project’s actual identity lives.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="difference">
+      <h3>CIGO vs COSIGO</h3>
+      <div class="panel">
+        <div class="compare">
+          <div class="compare-row">
+            <strong>CIGO</strong>
+            <div>speculative market-access token for trading, movement, visibility, and liquidity</div>
+          </div>
+          <div class="compare-row">
+            <strong>COSIGO</strong>
+            <div>official silver-referenced token intended for serious holding, reference, and settlement logic</div>
+          </div>
+          <div class="compare-row">
+            <strong>relationship</strong>
+            <div>CIGO is the door. COSIGO is the destination.</div>
+          </div>
+          <div class="compare-row">
+            <strong>plain language</strong>
+            <div>trade volatility here. exit into silver reference there.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="flow">
+      <h3>how it works</h3>
+      <div class="flow">
+        <article class="step">
+          <div class="step-num">01</div>
+          <h4>enter through market rails</h4>
+          <p>
+            People notice movement before they notice philosophy. CIGO exists to meet that reality directly.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-num">02</div>
+          <h4>gain exposure</h4>
+          <p>
+            Trading activity, visibility, and liquidity create attention where static pages often do not.
+          </p>
+        </article>
+
+        <article class="step">
+          <div class="step-num">03</div>
+          <h4>move into COSIGO</h4>
+          <p>
+            Serious holders are meant to move beyond the speculation rail and toward official COSIGO.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="panel">
+        <h4 style="margin:0 0 10px;">core line</h4>
+        <p style="font-size:18px; line-height:1.7; color:#dbe3ec;">
+          <strong>Trade in fast markets. Exit into silver reference.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="notices">
+      <h3>notices</h3>
+
+      <div class="grid-2">
+        <article class="panel">
+          <span class="pill pill-market">risk notice</span>
+          <h4>speculative market activity</h4>
+          <p>
+            CIGO is a speculative market-access token. Price volatility, trading losses,
+            liquidity shocks, and rapid market movement are inherent to speculative markets.
+            Participants act at their own discretion and assume their own risk.
+          </p>
+        </article>
+
+        <article class="panel">
+          <span class="pill pill-official">separation notice</span>
+          <h4>not the official COSIGO token</h4>
+          <p>
+            CIGO is not the official silver-referenced COSIGO token. Official COSIGO
+            information, identity, and project presentation are published separately at
+            <a href="https://token.cosigo.io/" style="color:#fff; text-decoration:underline;">token.cosigo.io</a>.
+          </p>
+        </article>
+      </div>
+
+      <section class="wallet-setup" id="wallet-setup">
+        <div class="section-label">wallet setup</div>
+        <h2>how to add CIGO to your wallet</h2>
+        <p class="wallet-lead">
+          Add CIGO directly to MetaMask on BNB Smart Chain. Always confirm the contract address before adding any token.
+        </p>
+
+        <div class="wallet-card">
+          <div class="wallet-row">
+            <span class="wallet-key">network</span>
+            <span class="wallet-value">BNB Smart Chain</span>
+          </div>
+
+          <div class="wallet-row">
+            <span class="wallet-key">symbol</span>
+            <span class="wallet-value">CIGO</span>
+          </div>
+
+          <div class="wallet-row">
+            <span class="wallet-key">decimals</span>
+            <span class="wallet-value">18</span>
+          </div>
+
+          <div class="wallet-row wallet-row-contract">
+            <span class="wallet-key">official contract</span>
+            <code id="cigo-contract">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
+          </div>
+
+          <div class="wallet-actions">
+            <button id="add-cigo-btn" class="wallet-btn" type="button">Add CIGO to MetaMask</button>
+            <button id="copy-cigo-btn" class="wallet-btn wallet-btn-secondary" type="button">Copy contract</button>
+          </div>
+
+          <p id="wallet-status" class="wallet-status" aria-live="polite"></p>
+        </div>
+
+        <p class="wallet-note">
+          MetaMask will try to add CIGO automatically. If that fails, copy the contract and import it manually on BNB
+          Smart Chain.
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <div class="footer-card">
+      <strong>Notice:</strong> CIGO is presented here as a market-access layer.
+      Official COSIGO remains separate at
+      <a href="https://token.cosigo.io/" style="color:#fff; text-decoration:underline;">token.cosigo.io</a>.
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const CIGO_TOKEN = {
+        address: "0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560",
+        symbol: "CIGO",
+        decimals: 18,
+        image: "https://market.cosigo.io/shared/assets/icons/cigo_256.png"
+      };
+
+      const BSC_MAINNET = {
+        chainId: "0x38",
+        chainName: "BNB Smart Chain",
+        nativeCurrency: {
+          name: "BNB",
+          symbol: "BNB",
+          decimals: 18
+        },
+        rpcUrls: ["https://bsc-dataseed.bnbchain.org"],
+        blockExplorerUrls: ["https://bscscan.com"]
+      };
+
+      const addBtn = document.getElementById("add-cigo-btn");
+      const copyBtn = document.getElementById("copy-cigo-btn");
+      const statusEl = document.getElementById("wallet-status");
+      const copyButtons = document.querySelectorAll("[data-copy]");
+
+      function setWalletStatus(message) {
+        if (statusEl) statusEl.textContent = message;
+      }
+
+      async function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+          return true;
+        }
+
+        const ta = document.createElement("textarea");
+        ta.value = value;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        ta.style.pointerEvents = "none";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+
+        let ok = false;
+        try {
+          ok = document.execCommand("copy");
+        } catch (err) {
+          ok = false;
+        }
+
+        document.body.removeChild(ta);
+        return ok;
+      }
+
+      async function ensureBscNetwork() {
+        const { ethereum } = window;
+        if (!ethereum) throw new Error("MetaMask was not detected.");
+
+        const currentChain = await ethereum.request({ method: "eth_chainId" });
+        if (currentChain === BSC_MAINNET.chainId) return;
+
+        try {
+          await ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: BSC_MAINNET.chainId }]
+          });
+        } catch (error) {
+          if (error && error.code === 4902) {
+            await ethereum.request({
+              method: "wallet_addEthereumChain",
+              params: [BSC_MAINNET]
+            });
+          } else {
+            throw error;
+          }
+        }
+      }
+
+      async function addCigoToMetaMask() {
+        const { ethereum } = window;
+
+        if (!ethereum) {
+          setWalletStatus("MetaMask not detected.");
+          return;
+        }
+
+        try {
+          setWalletStatus("Checking network...");
+          await ensureBscNetwork();
+
+          setWalletStatus("Open MetaMask to confirm...");
+          const added = await ethereum.request({
+            method: "wallet_watchAsset",
+            params: {
+              type: "ERC20",
+              options: {
+                address: CIGO_TOKEN.address,
+                symbol: CIGO_TOKEN.symbol,
+                decimals: CIGO_TOKEN.decimals,
+                image: CIGO_TOKEN.image
+              }
+            }
+          });
+
+          if (added) {
+            setWalletStatus("CIGO added.");
+          } else {
+            setWalletStatus("Request declined.");
+          }
+        } catch (error) {
+          console.error(error);
+
+          const ok = await copyText(CIGO_TOKEN.address).catch(() => false);
+          setWalletStatus(
+            ok
+              ? "Automatic add failed. Contract copied."
+              : "Automatic add failed. Use the contract shown above."
+          );
+        }
+      }
+
+      async function copyContract() {
+        try {
+          const ok = await copyText(CIGO_TOKEN.address);
+          if (ok) {
+            setWalletStatus("CIGO contract copied.");
+          } else {
+            setWalletStatus("Copy failed. Use the contract shown above.");
+          }
+        } catch (error) {
+          console.error(error);
+          setWalletStatus("Copy failed. Use the contract shown above.");
+        }
+      }
+
+      if (addBtn) addBtn.addEventListener("click", addCigoToMetaMask);
+      if (copyBtn) copyBtn.addEventListener("click", copyContract);
+
+      copyButtons.forEach((button) => {
+        button.addEventListener("click", async () => {
+          const value = button.getAttribute("data-copy");
+          const original = button.textContent;
+
+          try {
+            const ok = await copyText(value);
+            button.textContent = ok ? "Copied" : "Copy failed";
+          } catch (err) {
+            button.textContent = "Copy failed";
+          }
+
+          setTimeout(() => {
+            button.textContent = original;
+          }, 1200);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
