@@ -700,6 +700,10 @@
       cursor: pointer;
       font: inherit;
       letter-spacing: .02em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
 
     .wallet-btn:hover {
@@ -1182,9 +1186,10 @@
 
       <section class="wallet-setup" id="wallet-setup">
         <div class="section-label">wallet setup</div>
-        <h2>how to add CIGO to your wallet</h2>
+        <h2>buy CIGO or add it to your wallet</h2>
         <p class="wallet-lead">
-          Add CIGO directly to MetaMask on BNB Smart Chain. Always confirm the contract address before adding any token.
+          Buy CIGO on PancakeSwap or add it directly to MetaMask on BNB Smart Chain. Always confirm the contract address
+          before buying or importing any token.
         </p>
 
         <div class="wallet-card">
@@ -1209,6 +1214,9 @@
           </div>
 
           <div class="wallet-actions">
+            <a id="buy-cigo-btn" class="wallet-btn"
+              href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
+              target="_blank" rel="noopener">Buy CIGO on PancakeSwap</a>
             <button id="add-cigo-btn" class="wallet-btn" type="button">Add CIGO to MetaMask</button>
             <button id="copy-cigo-btn" class="wallet-btn wallet-btn-secondary" type="button">Copy contract</button>
           </div>
@@ -1217,8 +1225,8 @@
         </div>
 
         <p class="wallet-note">
-          MetaMask will try to add CIGO automatically. If that fails, copy the contract and import it manually on BNB
-          Smart Chain.
+          “Buy CIGO” opens PancakeSwap with the official CIGO contract preloaded. “Add CIGO to MetaMask” only imports
+          the token so your wallet can display it.
         </p>
       </section>
     </section>
