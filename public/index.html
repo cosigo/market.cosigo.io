@@ -931,7 +931,6 @@
         <a href="#contract">contract</a>
         <a href="#what">what is this</a>
         <a href="#difference">CIGO vs COSIGO</a>
-        <a href="#flow">how it works</a>
         <a href="https://trade.cosigo.io/">CIGO exchange</a>
         <a href="https://token.cosigo.io/">official COSIGO</a>
       </nav>
@@ -1003,13 +1002,42 @@
       </div>
     </section>
 
+    <section class="section wrap" id="wallet-setup">
+      <h3>buy or add CIGO</h3>
+
+      <div class="panel">
+        <p style="margin:0; color:#d8dee8; line-height:1.6;">
+          Buy CIGO through the market rail or add it to MetaMask on BNB Smart Chain.
+          Contract details remain in the verified contract section below.
+        </p>
+
+        <div class="token-actions" style="margin-top:16px;">
+          <a class="btn btn-primary" href="https://trade.cosigo.io" target="_blank" rel="noopener">buy CIGO on-site</a>
+
+          <a class="btn btn-secondary"
+            href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
+            target="_blank" rel="noopener">buy on PancakeSwap</a>
+
+          <button id="add-cigo-btn" class="btn btn-secondary" type="button">add CIGO to MetaMask</button>
+          <button id="copy-cigo-btn" class="btn btn-secondary" type="button">copy contract</button>
+          <a class="btn btn-secondary" href="#contract">view contract details</a>
+        </div>
+
+        <p id="wallet-status" class="wallet-status" aria-live="polite" style="margin-top:14px;"></p>
+
+        <div class="token-note" style="margin-top:16px;">
+          “Buy CIGO” opens a market path. “Add CIGO to MetaMask” only imports the token for display in your wallet.
+        </div>
+      </div>
+    </section>
+
     <section class="section wrap" aria-labelledby="spot-ref-title" style="padding-top:0;">
       <div class="panel" style="margin-top:14px;">
         <div class="hd">
           <div class="title" id="spot-ref-title">Live silver and currency reference</div>
           <div class="hint">
             → this ticker is 3rd party and COSIGO&trade; is not responsible for any error it may present.
-            Only COSIGO and CIGO are accurately defined internally. 
+            Only COSIGO and CIGO are accurately defined internally.
             Any reference outside this site pertaining to COSIGO or CIGO could be falsified.
           </div>
         </div>
@@ -1137,140 +1165,81 @@
     </section>
 
     <section class="section wrap" id="difference">
-      <h3>CIGO vs COSIGO</h3>
+      <h3>CIGO and COSIGO</h3>
+
       <div class="panel">
         <div class="compare">
           <div class="compare-row">
             <strong>CIGO</strong>
-            <div>speculative market-access token for trading, movement, visibility, and liquidity</div>
+            <div>speculative market-access token for liquidity, trading, and price discovery</div>
           </div>
+
           <div class="compare-row">
             <strong>COSIGO</strong>
-            <div>official silver-referenced token intended for serious holding, reference, and settlement logic</div>
+            <div>official silver-reference destination layer for the broader COSIGO system</div>
           </div>
+
           <div class="compare-row">
             <strong>relationship</strong>
-            <div>CIGO is the door. COSIGO is the destination.</div>
+            <div>CIGO is the access rail. COSIGO is the destination.</div>
           </div>
+
           <div class="compare-row">
             <strong>plain language</strong>
-            <div>trade volatility here. exit into silver reference there.</div>
+            <div>trade fast markets here. exit into official COSIGO there.</div>
           </div>
+        </div>
+
+        <div class="token-note" style="margin-top:18px;">
+          CIGO exists to meet speculative traffic where it actually appears. The official COSIGO identity remains
+          separate.
         </div>
       </div>
     </section>
 
-    <section class="section wrap" id="flow">
-      <h3>how it works</h3>
-      <div class="flow">
-        <article class="step">
-          <div class="step-num">01</div>
-          <h4>enter through market rails</h4>
-          <p>
-            People notice movement before they notice philosophy. CIGO exists to meet that reality directly.
-          </p>
-        </article>
-
-        <article class="step">
-          <div class="step-num">02</div>
-          <h4>gain exposure</h4>
-          <p>
-            Trading activity, visibility, and liquidity create attention where static pages often do not.
-          </p>
-        </article>
-
-        <article class="step">
-          <div class="step-num">03</div>
-          <h4>move into COSIGO</h4>
-          <p>
-            Serious holders are meant to move beyond the speculation rail and toward official COSIGO.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section wrap">
-      <div class="panel">
-        <h4 style="margin:0 0 10px;">core line</h4>
-        <p style="font-size:18px; line-height:1.7; color:#dbe3ec;">
-          <strong>Trade in fast markets. Exit into silver reference.</strong>
-        </p>
-      </div>
-    </section>
-
-    <section class="section wrap" id="notices">
-      <h3>notices</h3>
+    <section class="section wrap" id="resources">
+      <h3>resources and notices</h3>
 
       <div class="grid-2">
         <article class="panel">
-          <span class="pill pill-market">risk notice</span>
-          <h4>speculative market activity</h4>
-          <p>
-            CIGO is a speculative market-access token. Price volatility, trading losses,
-            liquidity shocks, and rapid market movement are inherent to speculative markets.
-            Participants act at their own discretion and assume their own risk.
-          </p>
+          <h4 style="margin:0 0 10px;">official links</h4>
+          <div class="compare">
+            <div class="compare-row">
+              <strong>official COSIGO</strong>
+              <div><a href="https://token.cosigo.io/" target="_blank" rel="noopener">token.cosigo.io</a></div>
+            </div>
+            <div class="compare-row">
+              <strong>trade interface</strong>
+              <div><a href="https://trade.cosigo.io/" target="_blank" rel="noopener">trade.cosigo.io</a></div>
+            </div>
+            <div class="compare-row">
+              <strong>BscScan</strong>
+              <div><a href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560" target="_blank"
+                  rel="noopener">view contract</a></div>
+            </div>
+            <div class="compare-row">
+              <strong>PancakeSwap</strong>
+              <div><a
+                  href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
+                  target="_blank" rel="noopener">buy CIGO</a></div>
+            </div>
+          </div>
         </article>
 
         <article class="panel">
-          <span class="pill pill-official">separation notice</span>
-          <h4>not the official COSIGO token</h4>
+          <h4 style="margin:0 0 10px;">important notice</h4>
           <p>
-            CIGO is not the official silver-referenced COSIGO token. Official COSIGO
-            information, identity, and project presentation are published separately at
-            <a href="https://token.cosigo.io/" style="color:#fff; text-decoration:underline;">token.cosigo.io</a>.
+            CIGO is a speculative market-access token. Volatility, losses, liquidity shocks, and fast market movement
+            are
+            inherent to speculative trading. Official COSIGO remains separate and is published at
+            <a href="https://token.cosigo.io/" target="_blank" rel="noopener"
+              style="text-decoration:underline;">token.cosigo.io</a>.
           </p>
         </article>
       </div>
+    </section>
+    </div>
 
-      <section class="wallet-setup" id="wallet-setup">
-        <div class="section-label">wallet setup</div>
-        <h2>buy CIGO or add it to your wallet</h2>
-        <p class="wallet-lead">
-          Buy CIGO on PancakeSwap or add it directly to MetaMask on BNB Smart Chain. Always confirm the contract address
-          before buying or importing any token.
-        </p>
-
-        <div class="wallet-card">
-          <div class="wallet-row">
-            <span class="wallet-key">network</span>
-            <span class="wallet-value">BNB Smart Chain</span>
-          </div>
-
-          <div class="wallet-row">
-            <span class="wallet-key">symbol</span>
-            <span class="wallet-value">CIGO</span>
-          </div>
-
-          <div class="wallet-row">
-            <span class="wallet-key">decimals</span>
-            <span class="wallet-value">18</span>
-          </div>
-
-          <div class="wallet-row wallet-row-contract">
-            <span class="wallet-key">official contract</span>
-            <code id="cigo-contract">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
-          </div>
-
-          <div class="wallet-actions">
-            <a id="buy-cigo-btn" class="wallet-btn"
-              href="https://trade.cosigo.io"
-              target="_blank" rel="noopener">Buy CIGO on-site</a>
-            <a id="buy-cigo-btn" class="wallet-btn"
-              href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
-              target="_blank" rel="noopener">Buy CIGO on PancakeSwap</a>
-            <button id="add-cigo-btn" class="wallet-btn" type="button">Add CIGO to MetaMask</button>
-            <button id="copy-cigo-btn" class="wallet-btn wallet-btn-secondary" type="button">Copy contract</button>
-          </div>
-
-          <p id="wallet-status" class="wallet-status" aria-live="polite"></p>
-        </div>
-
-        <p class="wallet-note">
-          “Buy CIGO” opens PancakeSwap with the official CIGO contract preloaded. “Add CIGO to MetaMask” only imports
-          the token so your wallet can display it.
-        </p>
-      </section>
     </section>
   </main>
 
@@ -1401,7 +1370,7 @@
           setWalletStatus(
             ok
               ? "Automatic add failed. Contract copied."
-              : "Automatic add failed. Use the contract shown above."
+              : "Automatic add failed. Use the contract shown below."
           );
         }
       }
@@ -1412,11 +1381,11 @@
           if (ok) {
             setWalletStatus("CIGO contract copied.");
           } else {
-            setWalletStatus("Copy failed. Use the contract shown above.");
+            setWalletStatus("Copy failed. Use the contract shown below.");
           }
         } catch (error) {
           console.error(error);
-          setWalletStatus("Copy failed. Use the contract shown above.");
+          setWalletStatus("Copy failed. Use the contract shown below.");
         }
       }
 
