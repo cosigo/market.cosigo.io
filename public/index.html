@@ -633,6 +633,120 @@
       font-size: 14px;
     }
 
+    .migration-notice {
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid rgba(255, 184, 77, 0.22);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255, 184, 77, 0.10), rgba(255, 255, 255, 0.02));
+      box-shadow: var(--shadow);
+    }
+
+    .migration-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #16110b;
+      background: linear-gradient(135deg, var(--amber), var(--amber-2));
+    }
+
+    .migration-notice h2 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 4vw, 40px);
+      line-height: 1.02;
+      letter-spacing: -.03em;
+    }
+
+    .migration-notice p {
+      margin: 0;
+      color: #d8dee8;
+      line-height: 1.65;
+    }
+
+    .migration-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .migration-card {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .migration-card h3 {
+      margin: 10px 0 8px;
+      font-size: 20px;
+      color: var(--ink);
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .migration-card p {
+      font-size: 14px;
+    }
+
+    .migration-card code {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      font-family: var(--mono);
+      font-size: 13px;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+
+    .status-tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .status-current {
+      color: #dff7ea;
+      background: rgba(71, 209, 140, 0.16);
+      border: 1px solid rgba(71, 209, 140, 0.22);
+    }
+
+    .status-retired {
+      color: #ffe7cf;
+      background: rgba(255, 138, 61, 0.14);
+      border: 1px solid rgba(255, 138, 61, 0.24);
+    }
+
+    .migration-foot {
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--amber);
+      border-radius: 14px;
+      background: rgba(255, 184, 77, 0.08);
+      color: #eadbc4;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    @media (max-width: 840px) {
+      .migration-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .wallet-setup {
       margin-top: 4rem;
       padding-top: 2rem;
@@ -938,33 +1052,74 @@
   </header>
 
   <main>
-    <section class="wrap" aria-label="Important notice" style="padding-top:18px;">
-  <div class="notice">
-    <div class="hero-card">
-      <strong>Important notice for users, reviewers, and labelers:</strong>
-      CIGO is more accurately described as a protected, intelligently controlled token with strong
-      administrative and market-defense features, not by the prejudicial “malicious” label applied in
-      MetaMask-related warning flows. CIGO was designed as a speculative market-access token with
-      protective mechanisms intended to limit bot pressure, whale concentration, and liquidity abuse
-      during fragile stages of market formation. Those features may raise centralization concerns and
-      deserve open review, but that is not the same as a malicious designation or the impairment of
-      normal wallet operability. No specific abusive function or actual misconduct by CIGO was identified
-      to COSIGO by the two representatives involved. Both declined to remove or correct the designation
-      and appeared to treat CIGO as though it were a scam token, despite the absence of any clearly stated
-      finding of fraud or exploit. Centralized scanners and labeling systems currently operate with broad
-      discretion and limited accountability. Holders who acquired CIGO did so with notice that it is a
-      controlled-risk token structure with explicit protections and restrictions. CIGO is not a naked meme 
-      or hype token. Its design is controlled and deliberate, and in that respect is closer to administratively 
-      managed tokens such as USDT than to an unmanaged meme asset. Secure is a fair description; scam is not. 
-      Relevant notices and disclosures are stated throughout the COSIGO website. In light of third-party 
-      restrictions, opaque warning systems, and inconsistent wallet behavior, holders have been advised to 
-      approach CIGO trades carefully, review all warnings, and make informed decisions while adverse labels 
-      remain in place. COSIGO currently regards Rabby wallet as a more transparent and functional option. 
-      For further details, see
-      <a href="https://labels.cosigo.io/" target="_blank" rel="noopener"><strong>labels.cosigo.io ↗</strong></a>.
-    </div>
-  </div>
-</section>
+
+    <section class="wrap" id="contract-migration" aria-label="Contract migration notice" style="padding-top:18px;">
+      <div class="migration-notice">
+        <div class="migration-kicker">official contract status notice</div>
+        <h2>CIGO contract migration</h2>
+
+        <p>
+          To prevent confusion between multiple CIGO contract pages on third-party explorers, COSIGO publishes
+          status plainly here. The first CIGO contract is retired and remains visible only as a historical on-chain 
+          record. Wallets associated with exposed CIGO market were migrated from original contract to 
+          current operational and secure contract. Current official CIGO contract for market.cosigo.io is replacement 
+          contract shown below. Use only current contract for wallet setup, public reference, and market activity. 
+        </p>
+
+        <div class="migration-grid">
+          <article class="migration-card">
+            <div class="status-tag status-current">current official contract</div>
+            <h3>Current CIGO</h3>
+            <p>
+              Use this address for wallet setup, market.cosigo.io reference, and all current CIGO activity.
+            </p>
+
+            <div class="token-address-wrap" style="margin-top:12px;">
+              <code>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
+              <button class="copy-btn" type="button"
+                data-copy="0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560">Copy</button>
+            </div>
+
+            <p style="margin-top:12px;">
+              <a href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560" target="_blank"
+                rel="noopener">
+                <strong>View current contract on BscScan ↗</strong>
+              </a>
+            </p>
+          </article>
+
+          <article class="migration-card">
+            <div class="status-tag status-retired">retired first contract</div>
+            <h3>Historical / retired CIGO</h3>
+            <p>
+              This earlier contract is retired, unsupported, and should not be used for current buying, wallet setup,
+              or official reference. Wallets associated with active CIGO market were migrated from retired 
+              naked meme contract to current official and serious contract.
+            </p>
+
+            <div class="token-address-wrap" style="margin-top:12px;">
+              <code>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code>
+              <button class="copy-btn" type="button"
+                data-copy="0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d">Copy</button>
+            </div>
+
+            <p style="margin-top:12px;">
+              <a href="https://bscscan.com/token/0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d" target="_blank"
+                rel="noopener">
+                <strong>View retired contract on BscScan ↗</strong>
+              </a>
+            </p>
+          </article>
+        </div>
+
+        <div class="migration-foot">
+          If you encounter two CIGO contracts with same name and symbol on explorer pages, search results,
+          screenshots, or reposts, treat <strong>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</strong> as retired 
+          historical record only, and treat <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong> as 
+          current official CIGO contract published by market.cosigo.io.
+        </div>
+      </div>
+    </section>
 
     <section class="hero wrap">
       <div class="hero-grid">
@@ -985,7 +1140,7 @@
           <div class="cta-row">
             <a class="btn btn-primary" href="https://token.cosigo.io/">go to official COSIGO</a>
             <a class="btn btn-secondary" href="#contract">view contract details</a>
-            <a class="btn btn-secondary" href="#difference">see the difference</a>
+            <a class="btn btn-secondary" href="#difference">see difference</a>
             <a class="btn btn-secondary" href="https://labels.cosigo.io">New Token Developer &NotEqual;</a>
           </div>
         </div>
@@ -1024,8 +1179,8 @@
           </div>
 
           <div class="warning">
-            This page is intentionally separate from the official COSIGO presentation.
-            CIGO is for market activity. COSIGO is the silver-referenced destination layer.
+            This page is intentionally separate from official COSIGO presentation.
+            CIGO is for market activity. COSIGO is silver-referenced destination layer.
           </div>
         </aside>
       </div>
@@ -1036,8 +1191,8 @@
 
       <div class="panel">
         <p style="margin:0; color:#d8dee8; line-height:1.6;">
-          Buy CIGO through the market rail or add it to MetaMask on BNB Smart Chain.
-          Contract details remain in the verified contract section below.
+          Buy CIGO through market rail or add it to MetaMask on BNB Smart Chain.
+          Contract details remain in verified contract section below.
         </p>
 
         <div class="token-actions" style="margin-top:16px;">
@@ -1066,20 +1221,39 @@
           <div>
             <h4>CIGO token details</h4>
             <div class="token-sub">
-              CIGO is live on BNB Smart Chain mainnet. Always verify the contract address directly
-              before buying, selling, sending, bridging, or adding the token to a wallet.
+              CIGO is live on BNB Smart Chain mainnet. Always verify contract address directly
+              before buying, selling, sending, bridging, or adding token to a wallet.
             </div>
           </div>
         </div>
 
         <div class="token-row">
-          <div class="token-label">Contract</div>
+          <div class="token-label">Current contract</div>
           <div class="token-value">
             <div class="token-address-wrap">
               <code id="cigo-address">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
               <button class="copy-btn" type="button"
                 data-copy="0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560">Copy</button>
             </div>
+          </div>
+        </div>
+
+        <div class="token-row">
+          <div class="token-label">Retired first contract</div>
+          <div class="token-value">
+            <div class="token-address-wrap">
+              <code>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code>
+              <button class="copy-btn" type="button"
+                data-copy="0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="token-row">
+          <div class="token-label">Contract status</div>
+          <div class="token-value">
+            Current official CIGO = <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong><br>
+            Retired historical CIGO = <strong>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</strong>
           </div>
         </div>
 
@@ -1095,10 +1269,11 @@
         </div>
 
         <div class="token-note">
-          Use only the contract address shown on this page and on the official BscScan listing.
-          Do not rely on screenshots, reposts, or copied symbols alone.
+          Use only <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong> for current CIGO.
+          The earlier <strong>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</strong> contract is retired and is published
+          here
+          only to prevent confusion from duplicate explorer listings, old screenshots, or older token references.
         </div>
-      </div>
     </section>
 
     <section class="section wrap" aria-labelledby="spot-ref-title" style="padding-top:0;">
@@ -1135,16 +1310,16 @@
           <h4>speculation rail</h4>
           <p>
             CIGO is designed for fast market exposure, cheap trading, and visible price action.
-            It is the access layer for people who arrive through speculative markets first.
+            It is access layer for people who arrive through speculative markets first.
           </p>
         </article>
 
         <article class="panel">
           <span class="pill pill-official">official</span>
-          <h4>not the final destination</h4>
+          <h4>not final destination</h4>
           <p>
-            CIGO is not presented as the backed settlement layer. Official COSIGO remains the serious token,
-            the reference layer, and the place where the project’s actual identity lives.
+            CIGO is not presented as backed settlement layer. Official COSIGO remains a serious token, 
+            reference layer, and a place where project’s actual identity lives.
           </p>
         </article>
       </div>
@@ -1162,12 +1337,12 @@
 
           <div class="compare-row">
             <strong>COSIGO&trade;</strong>
-            <div>official silver-reference destination layer for the broader COSIGO system</div>
+            <div>official silver-reference destination layer for broader COSIGO system</div>
           </div>
 
           <div class="compare-row">
             <strong>relationship</strong>
-            <div>CIGO is the access rail. COSIGO is the destination.</div>
+            <div>CIGO is a secure access rail. COSIGO is safe destination.</div>
           </div>
 
           <div class="compare-row">
@@ -1228,6 +1403,34 @@
       </div>
     </section>
     </div>
+
+    <section class="wrap" aria-label="Important notice" style="padding-top:18px;">
+      <div class="notice">
+        <div class="hero-card">
+          <strong>Important notice for users, reviewers, and labelers:</strong>
+          CIGO is more accurately described as a protected, intelligently controlled token with strong
+          administrative and market-defense features, not by prejudicial “malicious” label applied in
+          MetaMask-related warning flows. CIGO was designed as a speculative market-access token with
+          protective mechanisms intended to limit bot pressure, whale concentration, and liquidity abuse
+          during fragile stages of market formation. Those features may raise centralization concerns and
+          deserve open review, but that is not same as a malicious designation or impairment of
+          normal wallet operability. No specific abusive function or actual misconduct by CIGO was identified
+          to COSIGO by two representatives involved. Both declined to remove or correct their designation
+          and appeared to treat CIGO as though it were a scam token, despite absence of any clearly stated
+          finding of fraud or exploit. Centralized scanners and labeling systems currently operate with broad
+          discretion and limited accountability. Holders who acquired CIGO did so with notice that it is a
+          controlled-risk token structure with explicit protections and restrictions. CIGO is not a naked meme
+          or hype token. Its design is controlled and deliberate, and in that respect is closer to administratively
+          managed tokens such as USDT than to an unmanaged meme asset. Secure is a fair description; scam is not.
+          Relevant notices and disclosures are stated throughout COSIGO website. In light of third-party
+          restrictions, opaque warning systems, and inconsistent wallet behavior, holders have been advised to
+          approach CIGO trades carefully, review all warnings, and make informed decisions while adverse labels
+          remain in place. COSIGO currently regards Rabby wallet as a more transparent and functional option.
+          For further details, see
+          <a href="https://labels.cosigo.io/" target="_blank" rel="noopener"><strong>labels.cosigo.io ↗</strong></a>.
+        </div>
+      </div>
+    </section>
 
     </section>
   </main>
@@ -1359,7 +1562,7 @@
           setWalletStatus(
             ok
               ? "Automatic add failed. Contract copied."
-              : "Automatic add failed. Use the contract shown below."
+              : "Automatic add failed. Use contract shown below."
           );
         }
       }
@@ -1370,11 +1573,11 @@
           if (ok) {
             setWalletStatus("CIGO contract copied.");
           } else {
-            setWalletStatus("Copy failed. Use the contract shown below.");
+            setWalletStatus("Copy failed. Use contract shown below.");
           }
         } catch (error) {
           console.error(error);
-          setWalletStatus("Copy failed. Use the contract shown below.");
+          setWalletStatus("Copy failed. Use contract shown below.");
         }
       }
 
