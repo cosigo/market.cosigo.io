@@ -1030,6 +1030,66 @@
 </head>
 
 <body>
+<!-- COSIGO evidence/security cross-links -->
+<style>
+  .cosigo-crosslinks {
+    margin: 0;
+    padding: 10px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.92);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    position: relative;
+    z-index: 50;
+  }
+  .cosigo-crosslinks a {
+    color: #dbeafe;
+    text-decoration: none;
+    font-size: 0.86rem;
+    line-height: 1;
+    padding: 8px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: rgba(15, 23, 42, 0.74);
+    white-space: nowrap;
+  }
+  .cosigo-crosslinks a:hover,
+  .cosigo-crosslinks a:focus {
+    color: #ffffff;
+    border-color: rgba(96, 165, 250, 0.75);
+    background: rgba(30, 64, 175, 0.38);
+  }
+  @media (max-width: 720px) {
+    .cosigo-crosslinks {
+      justify-content: flex-start;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding: 9px 10px;
+    }
+    .cosigo-crosslinks a {
+      flex: 0 0 auto;
+      font-size: 0.82rem;
+    }
+  }
+</style>
+<nav class="cosigo-crosslinks" aria-label="COSIGO evidence and security links">
+  <a href="https://labels.cosigo.io/">labels hub</a>
+  <a href="https://labels.cosigo.io/evidence.html">evidence</a>
+  <a href="https://labels.cosigo.io/scanner-controls.html">scanner controls</a>
+  <a href="https://labels.cosigo.io/liquidity-trap.html">liquidity trap</a>
+  <a href="https://labels.cosigo.io/club-effect.html">club effect</a>
+  <a href="https://labels.cosigo.io/hypothesis.html">hypothesis</a>
+  <a href="https://snakepit.cosigo.io/security_notice.html#summary">security notes</a>
+  <a href="https://snakepit.cosigo.io/">incident archive</a>
+  <a href="https://trade.cosigo.io/">CIGO swap</a>
+  <a href="https://market.cosigo.io/">market</a>
+</nav>
+
+
 
   <header class="topbar">
     <div class="wrap topbar-inner">
