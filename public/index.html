@@ -1051,67 +1051,6 @@
 </head>
 
 <body>
-<!-- COSIGO evidence/security cross-links -->
-<style>
-  .cosigo-crosslinks {
-    margin: 0;
-    padding: 10px 14px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    background: rgba(2, 6, 23, 0.92);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    position: relative;
-    z-index: 50;
-  }
-  .cosigo-crosslinks a {
-    color: #dbeafe;
-    text-decoration: none;
-    font-size: 0.86rem;
-    line-height: 1;
-    padding: 8px 10px;
-    border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.28);
-    background: rgba(15, 23, 42, 0.74);
-    white-space: nowrap;
-  }
-  .cosigo-crosslinks a:hover,
-  .cosigo-crosslinks a:focus {
-    color: #ffffff;
-    border-color: rgba(96, 165, 250, 0.75);
-    background: rgba(30, 64, 175, 0.38);
-  }
-  @media (max-width: 720px) {
-    .cosigo-crosslinks {
-      justify-content: flex-start;
-      overflow-x: auto;
-      flex-wrap: nowrap;
-      padding: 9px 10px;
-    }
-    .cosigo-crosslinks a {
-      flex: 0 0 auto;
-      font-size: 0.82rem;
-    }
-  }
-</style>
-<nav class="cosigo-crosslinks" aria-label="COSIGO evidence and security links">
-  <a href="https://labels.cosigo.io/">labels hub</a>
-  <a href="https://labels.cosigo.io/evidence.html">evidence</a>
-  <a href="https://labels.cosigo.io/scanner-controls.html">scanner controls</a>
-  <a href="https://labels.cosigo.io/liquidity-trap.html">liquidity trap</a>
-  <a href="https://labels.cosigo.io/club-effect.html">club effect</a>
-  <a href="https://labels.cosigo.io/hypothesis.html">hypothesis</a>
-  <a href="https://snakepit.cosigo.io/security_notice.html#summary">security notes</a>
-  <a href="https://snakepit.cosigo.io/">incident archive</a>
-  <a href="https://trade.cosigo.io/">CIGO swap</a>
-  <a href="https://market.cosigo.io/">market</a>
-</nav>
-
-
-
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="https://market.cosigo.io/">
@@ -1121,14 +1060,6 @@
           <small>speculative access rail</small>
         </span>
       </a>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="#contract">contract</a>
-        <a href="#what">what is this</a>
-        <a href="#difference">CIGO vs COSIGO</a>
-        <a href="https://trade.cosigo.io/">CIGO exchange</a>
-        <a href="https://token.cosigo.io/">official COSIGO&trade;</a>
-      </nav>
     </div>
   </header>
 
@@ -1174,14 +1105,11 @@
             <h3>Historical / retired CIGO</h3>
             <p>
               This earlier contract is retired, unsupported, and should not be used for current buying, wallet setup,
-              or official reference. Wallets associated with active CIGO market were migrated from retired 
-              naked meme contract to current official and serious contract.
+              or official reference. Wallets associated with the active CIGO market were migrated from the retired first contract to the current official CIGO contract.
             </p>
 
             <div class="token-address-wrap" style="margin-top:12px;">
               <code>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code>
-              <button class="copy-btn" type="button"
-                data-copy="0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d">Copy</button>
             </div>
 
             <p style="margin-top:12px;">
@@ -1319,22 +1247,11 @@
           </div>
         </div>
 
-        <div class="token-row">
-          <div class="token-label">Retired first contract</div>
-          <div class="token-value">
-            <div class="token-address-wrap">
-              <code>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code>
-              <button class="copy-btn" type="button"
-                data-copy="0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d">Copy</button>
-            </div>
-          </div>
-        </div>
 
         <div class="token-row">
           <div class="token-label">Contract status</div>
           <div class="token-value">
-            Current official CIGO = <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong><br>
-            Retired historical CIGO = <strong>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</strong>
+            Current official CIGO = <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong>
           </div>
         </div>
 
@@ -1351,9 +1268,8 @@
 
         <div class="token-note">
           Use only <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong> for current CIGO.
-          The earlier <strong>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</strong> contract is retired and is published
-          here
-          only to prevent confusion from duplicate explorer listings, old screenshots, or older token references.
+          The retired first contract is listed in the migration notice above only to prevent confusion from old links,
+          screenshots, duplicate explorer listings, or older token references.
         </div>
     </section>
 
@@ -1500,7 +1416,7 @@
           and appeared to treat CIGO as though it were a scam token, despite absence of any clearly stated
           finding of fraud or exploit. Centralized scanners and labeling systems currently operate with broad
           discretion and limited accountability. Holders who acquired CIGO did so with notice that it is a
-          controlled-risk token structure with explicit protections and restrictions. CIGO is not a naked meme
+          controlled-risk token structure with explicit protections and restrictions. CIGO is not presented as an unsupported meme token
           or hype token. Its design is controlled and deliberate, and in that respect is closer to administratively
           managed tokens such as USDT than to an unmanaged meme asset. Secure is a fair description; scam is not.
           Relevant notices and disclosures are stated throughout COSIGO website. In light of third-party
