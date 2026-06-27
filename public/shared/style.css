@@ -1201,3 +1201,50 @@
   border-color: rgba(167, 139, 250, 0.32);
 }
 /* === end market purple card wash v1 === */
+/* === market unified header v1 === */
+.market-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+.market-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 72px;
+}
+
+.market-title {
+  flex: 0 0 auto;
+}
+
+.market-header-nav {
+  flex: 1 1 auto;
+  width: auto;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.market-header-nav .menu-label {
+  margin-right: 2px;
+}
+
+@media (max-width: 980px) {
+  .market-topbar-inner {
+    align-items: flex-start;
+  }
+
+  .market-header-nav {
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+/* === end market unified header v1 === */
+
