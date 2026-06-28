@@ -4,14 +4,13 @@
 <head>
 
   <!-- Shared Styles -->
-  <link rel="stylesheet" href="/shared/style.css?v=20260628-025907">
-  <link rel="stylesheet" href="/shared/cigo-footer.css?v=20260628-023705">
+  <link rel="stylesheet" href="/shared/style.css?v=20260628-144931">
+  <link rel="stylesheet" href="/shared/cigo-footer.css?v=20260628-144931">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>cosigo market — CIGO</title>
   <meta name="description"
     content="Official CIGO market-access token page with BNB Smart Chain contract details, wallet setup, logo assets, and links to Official COSIGO token resources.">
-  <meta name="robots" content="index,follow" />
 
   <meta name="keywords" content="CIGO, cosigo market, BNB Smart Chain token, CIGO contract, CIGO logo, COSIGO">
 
@@ -26,7 +25,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
 
   <!-- Open Graph -->
   <meta property="og:title" content="cosigo market — CIGO">
@@ -51,7 +49,9 @@
         </span>
       </a>
 
-      <nav class="cosigo-escape-nav market-header-nav" aria-label="COSIGO site navigation">
+      <button class="market-nav-toggle" type="button" aria-expanded="false" aria-controls="marketHeaderNav">menu</button>
+
+      <nav id="marketHeaderNav" class="cosigo-escape-nav market-header-nav" aria-label="COSIGO site navigation">
         <span class="menu-label">COSIGO:</span>
         <a href="https://cosigo.io/">home</a>
         <a href="https://trade.cosigo.io/">CIGO swap</a>
@@ -65,73 +65,7 @@
   </header>
 
   <main>
-
-    <section class="wrap" id="contract-migration" aria-label="Contract migration notice" style="padding-top:18px;">
-      <div class="migration-notice">
-        <div class="migration-kicker">official contract status notice</div>
-        <h2>CIGO contract migration</h2>
-
-        <p>
-          COSIGO publishes CIGO contract status here to prevent confusion from old explorer links, screenshots,
-          and duplicate search results. The first CIGO contract is retired and shown only as historical on-chain
-          record. Use only the current official CIGO contract below for wallet setup, public reference, and market
-          activity.
-        </p>
-
-        <div class="migration-grid">
-          <article class="migration-card">
-            <div class="status-tag status-current">current official contract</div>
-            <h3>Current CIGO</h3>
-            <p>
-              Use this address for wallet setup, market.cosigo.io reference, and all current CIGO activity.
-            </p>
-
-            <div class="token-address-wrap" style="margin-top:12px;">
-              <code>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
-              <button class="copy-btn" type="button"
-                data-copy="0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560">Copy</button>
-            </div>
-            <div class="contract-action-row">
-              <a class="contract-action-btn contract-action-primary"
-                href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560" target="_blank"
-                rel="noopener">
-                View current contract on BscScan ↗
-              </a>
-            </div>
-          </article>
-
-          <article class="migration-card">
-            <div class="status-tag status-retired">retired first contract</div>
-            <h3>Historical / retired CIGO</h3>
-            <p>
-              This earlier contract is retired, unsupported, and should not be used for current buying, wallet setup,
-              or official reference. Wallets associated with the active CIGO market were migrated from the retired first
-              contract to the current official CIGO contract.
-            </p>
-
-            <div class="token-address-wrap" style="margin-top:12px;">
-              <code>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code>
-            </div>
-
-            <p style="margin-top:12px;">
-              <a href="https://bscscan.com/token/0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d" target="_blank"
-                rel="noopener">
-                <strong>View retired contract on BscScan ↗</strong>
-              </a>
-            </p>
-          </article>
-        </div>
-
-        <div class="migration-foot">
-          If you encounter two CIGO contracts with same name and symbol on explorer pages, search results,
-          screenshots, or reposts, treat <strong>0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</strong> as retired
-          historical record only, and treat <strong>0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</strong> as
-          current official CIGO contract published by market.cosigo.io.
-        </div>
-      </div>
-    </section>
-
-    <section class="hero wrap">
+<section class="hero wrap">
       <div class="hero-grid">
         <div class="hero-card">
           <div class="eyebrow">CIGO market access · COSIGO separate</div>
@@ -148,9 +82,15 @@
           </div>
 
           <div class="cta-row">
-            <a class="btn btn-secondary" href="#contract">current CIGO contract</a>
-            <a class="btn btn-secondary" href="/whitepaper.html" target="_blank" rel="noopener">CIGO whitepaper draft</a>
+            <a class="contract-action-btn contract-action-primary" href="https://trade.cosigo.io" target="_blank" rel="noopener">buy CIGO on site</a>
+            <a class="btn btn-secondary" href="#status-notice">current CIGO contract notice</a>
           </div>
+
+            <p class="market-route-note">
+            Preferred route: use the on-site CIGO swap first. External DEX routes are secondary and may show
+            wallet/router warnings unrelated to the official CIGO contract notice on this page.
+          </p>
+
         </div>
 
         <aside class="hero-card status-panel">
@@ -193,404 +133,252 @@
       </div>
     </section>
 
-    <section class="section wrap" id="wallet-setup">
-      <h3>buy or add CIGO</h3>
-
-      <div class="panel">
-        <p style="margin:0; color:#d8dee8; line-height:1.6;">
-          Use the official trade flow for CIGO, or add the current CIGO contract to a BNB Smart Chain wallet.
-        </p>
-
-        <div class="token-actions" style="margin-top:16px;">
-          <a class="btn btn-primary" href="https://trade.cosigo.io" target="_blank" rel="noopener">trade CIGO
-            on-site</a>
-
-          <a class="btn btn-secondary"
-            href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
-            target="_blank" rel="noopener">buy on PancakeSwap</a>
-        </div>
-
-        <p id="wallet-status" class="wallet-status" aria-live="polite" style="margin-top:14px;"></p>
-
-        <div class="token-note" style="margin-top:16px;">
-          Wallet setup instructions are maintained at trade.cosigo.io. Rabby is generally preferred for normal CIGO
-          access.
-        </div>
-      </div>
-    </section>
-
     <section class="section wrap" id="contract">
-      <h3>contract</h3>
+      <h3>additional contract details</h3>
 
       <div class="panel token-panel">
         <div class="token-head">
           <div>
             <h4>CIGO token details</h4>
-            <div class="token-sub">
-              CIGO is live on BNB Smart Chain mainnet. Always verify the current contract before buying,
-              selling, sending, bridging, or adding CIGO to a wallet.
-            </div>
-          </div>
-        </div>
-
-        <div class="token-grid">
-          <div class="token-row">
-            <div class="token-label">Current contract</div>
-            <div class="token-value">
-              <div class="token-address-wrap">
-                <code id="cigo-address">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
-                <button class="copy-btn" type="button"
-                  data-copy="0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560">Copy</button>
-              </div>
-            </div>
+            <p class="token-sub">
+              CIGO is live on BNB Smart Chain mainnet. The current contract address, copy button, and primary
+              BscScan link are listed in the official current-contract notice on this page.
+            </p>
           </div>
         </div>
 
         <div class="token-actions">
-          <a class="btn btn-primary" href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
-            target="_blank" rel="noopener">
-            CIGO - BscScan
+          <a class="contract-action-btn contract-action-secondary dex-secondary-link"
+            href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
+            target="_blank" rel="noopener">PancakeSwap / external DEX route ↗</a>
+          <a class="contract-action-btn contract-action-primary" href="/whitepaper.html">
+            CIGO whitepaper draft →
           </a>
-          <a class="btn btn-secondary" href="/shared/assets/icons/cigo_first_stars_trans_32.svg"
-            download="cigo_first_stars_trans_32.svg">
+          <a class="contract-action-btn contract-action-secondary" href="/shared/assets/icons/cigo_first_stars_trans_32.svg">
             CIGO SVG Download
           </a>
         </div>
 
-        <div class="token-note">
-          Use only the current CIGO contract above. The retired first contract is listed in the migration notice only
-          to prevent confusion from old links, screenshots, duplicate explorer listings, or older token references.
+        <div class="token-note contract-details-note">
+          <p>
+            <strong>Wallet setup:</strong> wallet setup instructions are maintained at
+            <a href="https://trade.cosigo.io/guides.html">trade.cosigo.io guides</a>.
+            Rabby is generally preferred for normal CIGO access.
+          </p>
+          <p>
+            <strong>External DEX route:</strong> PancakeSwap is provided only as a secondary route for advanced users.
+            The preferred public route is the on-site CIGO swap.
+          </p>
+          <p>
+            <strong>Contract caution:</strong> use only the current CIGO contract shown in the official
+            current-contract notice on this page. The retired first contract is listed only to prevent confusion
+            from old links, screenshots, duplicate explorer listings, or older token references.
+          </p>
         </div>
-      </div>
+
+</div>
     </section>
 
     <section class="section wrap" id="what">
-      <h3>what this is</h3>
-      <div class="grid-2">
-        <article class="panel">
-          <span class="pill pill-market">cigo</span>
-          <h4>speculation rail</h4>
-          <p>
-            CIGO is designed for fast market exposure, cheap trading, and visible price action.
-            It is access layer for people who arrive through speculative markets first.
-          </p>
-        </article>
+      <h2>what this is</h2>
 
-        <article class="panel">
-          <span class="pill pill-official">official</span>
-          <h4>not final destination</h4>
-          <p>
-            CIGO is not presented as backed settlement layer. Official COSIGO remains a serious token,
-            reference layer, and a place where project’s actual identity lives.
-          </p>
-        
-          <div class="official-cosigo-token-moved" style="margin-top:14px;">
-            <a class="contract-action-btn contract-action-primary" href="https://token.cosigo.io/">
-              Official COSIGO token →
-            </a>
-          </div>
-</article>
-      </div>
-    </section>
-
-    <section class="section wrap" id="difference">
-      <h3>CIGO and COSIGO&trade;</h3>
-
-      <div class="panel">
-        <div class="compare">
-          <div class="compare-row">
-            <strong>CIGO</strong>
-            <div>speculative market-access token for liquidity, trading, and price discovery</div>
+      <article class="panel cigo-cosigo-relationship-card">
+        <div class="relationship-grid">
+          <div class="relationship-block relationship-cigo">
+            <div class="status-tag status-current">CIGO</div>
+            <h3>speculative market-access rail</h3>
+            <p>
+              CIGO is designed for fast market exposure, liquidity, trading, and visible price discovery.
+              It is the access layer for people who arrive through speculative markets first.
+            </p>
+            <p>
+              CIGO is speculative. Volatility, losses, liquidity shocks, and fast market movement are normal market
+              risks, not promises or obligations of COSIGO.
+            </p>
           </div>
 
-          <div class="compare-row">
-            <strong>COSIGO&trade;</strong>
-            <div>official silver-reference destination layer for broader COSIGO system</div>
-          </div>
+          <div class="relationship-block relationship-cosigo">
+            <div class="status-tag status-retired">COSIGO&trade;</div>
+            <h3>official reference destination</h3>
+            <p>
+              CIGO is not presented as the backed settlement layer. Official COSIGO&trade; remains separate as the
+              serious token, reference layer, and place where the project’s actual identity lives.
+            </p>
+            <p>
+              COSIGO&trade; is the official silver-reference destination layer for the broader COSIGO system.
+            </p>
 
-          <div class="compare-row">
-            <strong>relationship</strong>
-            <div>CIGO is a secure access rail. COSIGO is safe destination.</div>
-          </div>
-
-          <div class="compare-row">
-            <strong>plain language</strong>
-            <div>trade fast markets here. exit into Official COSIGO token there.</div>
+            <div class="official-cosigo-token-moved">
+              <a class="contract-action-btn contract-action-primary" href="https://token.cosigo.io/">
+                Official COSIGO token →
+              </a>
+            </div>
           </div>
         </div>
 
-        <div class="token-note" style="margin-top:18px;">
-          CIGO exists to meet speculative traffic where it actually appears. The Official COSIGO token identity remains
-          separate.
+        <div class="relationship-plain">
+          <strong>Plain language:</strong>
+          trade fast markets through CIGO; use Official COSIGO&trade; for the separate silver-reference identity.
         </div>
-      </div>
+      </article>
     </section>
 
-    <section class="section wrap" id="resources">
+        <section class="section wrap" id="resources">
       <h3>resources and notices</h3>
 
       <div class="grid-2">
         <article class="panel">
-          <h4 style="margin:0 0 10px;">official links</h4>
+          <h4>official links</h4>
+
           <div class="compare">
             <div class="compare-row">
               <strong>trade interface</strong>
-              <div><a href="https://trade.cosigo.io/" target="_blank" rel="noopener">secure on-site CIGO swap, request, pool, and guides</a></div>
+              <div>
+                <a href="https://trade.cosigo.io/" target="_blank" rel="noopener">
+                  secure on-site CIGO swap, request, pool, and guides
+                </a>
+              </div>
             </div>
+
             <div class="compare-row">
               <strong>PancakeSwap</strong>
-              <div><a
-                  href="https://pancakeswap.finance/swap?chain=bsc&outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
-                  target="_blank" rel="noopener">advanced DEX route for CIGO</a></div>
+              <div>
+                <a href="https://pancakeswap.finance/swap?chain=bsc&amp;outputCurrency=0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560"
+                  target="_blank" rel="noopener">
+                  advanced DEX route for CIGO
+                </a>
+              </div>
             </div>
+
             <div class="compare-row">
               <strong>COSIGO home page</strong>
-              <div><a href="https://cosigo.io" target="_blank" rel="noopener">start here for the main COSIGO system</a></div>
+              <div>
+                <a href="https://cosigo.io/" target="_blank" rel="noopener">
+                  start here for the main COSIGO system
+                </a>
+              </div>
             </div>
+
             <div class="compare-row">
               <strong>Official COSIGO token</strong>
-              <div><a href="https://token.cosigo.io/" target="_blank" rel="noopener">token.cosigo.io</a></div>
+              <div>
+                <a href="https://token.cosigo.io/" target="_blank" rel="noopener">
+                  token.cosigo.io
+                </a>
+              </div>
             </div>
+
             <div class="compare-row">
               <strong>COSIGO documentation</strong>
-              <div><a href="https://docs.cosigo.io" target="_blank" rel="noopener">COSIGO whitepaper, docs, and reference material</a></div>
+              <div>
+                <a href="https://docs.cosigo.io/" target="_blank" rel="noopener">
+                  COSIGO whitepaper, docs, and reference material
+                </a>
+              </div>
             </div>
           </div>
         </article>
 
         <article class="panel">
-          <h4 style="margin:0 0 10px;">public notices</h4>
+          <h4>public notices</h4>
+
           <div class="compare">
             <div class="compare-row">
               <strong>labels</strong>
-              <div><a href="https://labels.cosigo.io/" target="_blank" rel="noopener">public label record</a></div>
+              <div>
+                <a href="https://labels.cosigo.io/" target="_blank" rel="noopener">
+                  public label record
+                </a>
+              </div>
             </div>
+
             <div class="compare-row">
               <strong>security</strong>
-              <div><a href="https://snakepit.cosigo.io/security_notice.html#summary" target="_blank"
-                  rel="noopener">security notes</a></div>
+              <div>
+                <a href="https://snakepit.cosigo.io/security_notice.html#summary" target="_blank" rel="noopener">
+                  security notes
+                </a>
+              </div>
+            </div>
+
+            <div class="compare-row market-metals-ticker-link">
+              <strong>metals ticker</strong>
+              <div>
+                <a href="https://quote.cosigo.io/#spot-ref-title" target="_blank" rel="noopener">
+                  live gold/silver reference
+                </a>
+              </div>
             </div>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="wrap" aria-label="Important notice" style="padding-top:18px;">
-      <div class="risk-note">
-        <p>
-          <strong>Important notice for users, reviewers, and labelers:</strong>
-          CIGO is presented by COSIGO as a controlled-risk, administratively managed market-access token with protective
-          features intended to limit bot pressure, whale concentration, and liquidity abuse during early market
-          formation.
-          Those controls may raise centralization concerns and deserve open review, but COSIGO does not regard them as
-          evidence of fraud, exploit behavior, or malicious token design.
-        </p>
+<section class="section wrap market-status-section" id="status-notice">
+<div class="migration-notice">
+        <div class="migration-kicker">official contract status notice</div>
+        <h2>CIGO contract migration</h2>
 
         <p>
-          COSIGO has disputed third-party wallet and scanner labels that impair normal CIGO access without clearly
-          identifying
-          a specific abusive function or confirmed misconduct. Holders should review public disclosures, understand that
-          CIGO
-          is not an unmanaged meme asset, and approach trades carefully while adverse labels remain in place.
+          COSIGO publishes CIGO contract status here to prevent confusion from old explorer links, screenshots,
+          and duplicate search results. The first CIGO contract is retired and shown only as historical on-chain
+          record. Use only the current official CIGO contract below for wallet setup, public reference, and market
+          activity.
         </p>
 
-        <p>
-          <strong>Wallet caution:</strong>
-          MetaMask-related warning flows have been inconsistent in CIGO’s documented experience. Verify wallet behavior
-          before
-          relying on it, and consider Rabby Wallet for normal CIGO access. For further details, see
-          <a href="https://labels.cosigo.io/" target="_blank" rel="noopener"><strong>labels.cosigo.io ↗</strong></a>.
-        </p>
+        <div class="migration-grid">
+          <article class="migration-card">
+            <div class="status-tag status-current">current official contract</div>
+            <h3>Current CIGO</h3>
+            <p>
+              Use this address for wallet setup, market.cosigo.io reference, and all current CIGO activity.
+            </p>
+
+            <div class="token-address-wrap" style="margin-top:12px;">
+              <code class="inline-contract-address">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code>
+              <button class="copy-btn" type="button"
+                data-copy="0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560">Copy</button>
+            </div>
+            <div class="contract-action-row">
+              <a class="contract-action-btn contract-action-primary"
+                href="https://bscscan.com/token/0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560" target="_blank"
+                rel="noopener">
+                View current contract on BscScan ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="migration-card">
+            <div class="status-tag status-retired">retired first contract</div>
+            <h3>Historical / retired CIGO</h3>
+            <p>
+              This earlier contract is retired, unsupported, and should not be used for current buying, wallet setup,
+              or official reference. Wallets associated with the active CIGO market were migrated from the retired first
+              contract to the current official CIGO contract.
+            </p>
+
+            <div class="token-address-wrap" style="margin-top:12px;">
+              <code class="inline-contract-address">0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code>
+            </div>
+
+            <p style="margin-top:12px;">
+              <a href="https://bscscan.com/token/0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d" target="_blank"
+                rel="noopener">
+                <strong>View retired contract on BscScan ↗</strong>
+              </a>
+            </p>
+          </article>
+        </div>
+
+        <div class="migration-foot">
+          If you encounter two CIGO contracts with same name and symbol on explorer pages, search results,
+          screenshots, or reposts, treat <code class="inline-contract-address">0xdafaf7b17A3C909e1153ce7A75f767cCCf9cf79d</code> as retired
+          historical record only, and treat <code class="inline-contract-address">0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560</code> as
+          current official CIGO contract published by market.cosigo.io.
+        </div>
       </div>
     </section>
-
-    <section class="section wrap" aria-labelledby="spot-ref-title" style="padding-top:0;">
-      <div class="panel" style="margin-top:14px;">
-        <div class="hd">
-          <div class="title" id="spot-ref-title">Live silver and currency reference</div>
-          <div class="hint">
-            market ticker is 3rd party and COSIGO&trade; is not responsible for any error it may present.
-            Only COSIGO and CIGO are accurately defined internally.
-            Any reference outside this site pertaining to COSIGO or CIGO could be falsified. Always verify your browser
-            address before proceeding.
-          </div>
-        </div>
-
-        <div class="ticker-shell" style="margin-top:16px;">
-          <iframe src="/assets/silver-ticker.html" loading="lazy" title="Live silver and currency ticker"
-            class="ticker-frame">
-          </iframe>
-        </div>
-
-        <div style="padding-top:12px;">
-          <p class="value-live-note">
-            Market quotation is shown above for reference only.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const CIGO_TOKEN = {
-        address: "0x3a38e963f524E0dDFB75dFa1752b4Cd1364F5560",
-        symbol: "CIGO",
-        decimals: 18,
-        image: "https://market.cosigo.io/shared/assets/icons/cigo_256.png"
-      };
-
-      const BSC_MAINNET = {
-        chainId: "0x38",
-        chainName: "BNB Smart Chain",
-        nativeCurrency: {
-          name: "BNB",
-          symbol: "BNB",
-          decimals: 18
-        },
-        rpcUrls: ["https://bsc-dataseed.bnbchain.org"],
-        blockExplorerUrls: ["https://bscscan.com"]
-      };
-
-      const addBtn = document.getElementById("add-cigo-btn");
-      const copyBtn = document.getElementById("copy-cigo-btn");
-      const statusEl = document.getElementById("wallet-status");
-      const copyButtons = document.querySelectorAll("[data-copy]");
-
-      function setWalletStatus(message) {
-        if (statusEl) statusEl.textContent = message;
-      }
-
-      async function copyText(value) {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(value);
-          return true;
-        }
-
-        const ta = document.createElement("textarea");
-        ta.value = value;
-        ta.setAttribute("readonly", "");
-        ta.style.position = "fixed";
-        ta.style.opacity = "0";
-        ta.style.pointerEvents = "none";
-        document.body.appendChild(ta);
-        ta.focus();
-        ta.select();
-
-        let ok = false;
-        try {
-          ok = document.execCommand("copy");
-        } catch (err) {
-          ok = false;
-        }
-
-        document.body.removeChild(ta);
-        return ok;
-      }
-
-      async function ensureBscNetwork() {
-        const { ethereum } = window;
-        if (!ethereum) throw new Error("MetaMask was not detected.");
-
-        const currentChain = await ethereum.request({ method: "eth_chainId" });
-        if (currentChain === BSC_MAINNET.chainId) return;
-
-        try {
-          await ethereum.request({
-            method: "wallet_switchEthereumChain",
-            params: [{ chainId: BSC_MAINNET.chainId }]
-          });
-        } catch (error) {
-          if (error && error.code === 4902) {
-            await ethereum.request({
-              method: "wallet_addEthereumChain",
-              params: [BSC_MAINNET]
-            });
-          } else {
-            throw error;
-          }
-        }
-      }
-
-      async function addCigoToMetaMask() {
-        const { ethereum } = window;
-
-        if (!ethereum) {
-          setWalletStatus("MetaMask not detected.");
-          return;
-        }
-
-        try {
-          setWalletStatus("Checking network...");
-          await ensureBscNetwork();
-
-          setWalletStatus("Open MetaMask to confirm...");
-          const added = await ethereum.request({
-            method: "wallet_watchAsset",
-            params: {
-              type: "ERC20",
-              options: {
-                address: CIGO_TOKEN.address,
-                symbol: CIGO_TOKEN.symbol,
-                decimals: CIGO_TOKEN.decimals,
-                image: CIGO_TOKEN.image
-              }
-            }
-          });
-
-          if (added) {
-            setWalletStatus("CIGO added.");
-          } else {
-            setWalletStatus("Request declined.");
-          }
-        } catch (error) {
-          console.error(error);
-
-          const ok = await copyText(CIGO_TOKEN.address).catch(() => false);
-          setWalletStatus(
-            ok
-              ? "Automatic add failed. Contract copied."
-              : "Automatic add failed. Use contract shown below."
-          );
-        }
-      }
-
-      async function copyContract() {
-        try {
-          const ok = await copyText(CIGO_TOKEN.address);
-          if (ok) {
-            setWalletStatus("CIGO contract copied.");
-          } else {
-            setWalletStatus("Copy failed. Use contract shown below.");
-          }
-        } catch (error) {
-          console.error(error);
-          setWalletStatus("Copy failed. Use contract shown below.");
-        }
-      }
-
-      if (addBtn) addBtn.addEventListener("click", addCigoToMetaMask);
-      if (copyBtn) copyBtn.addEventListener("click", copyContract);
-
-      copyButtons.forEach((button) => {
-        button.addEventListener("click", async () => {
-          const value = button.getAttribute("data-copy");
-          const original = button.textContent;
-
-          try {
-            const ok = await copyText(value);
-            button.textContent = ok ? "Copied" : "Copy failed";
-          } catch (err) {
-            button.textContent = "Copy failed";
-          }
-
-          setTimeout(() => {
-            button.textContent = original;
-          }, 1200);
-        });
-      });
-    });
-  </script>
-
+</main>
 <footer class="cigo-system-footer">
     <div class="cigo-footer-inner">
       <div class="cigo-footer-info">
@@ -611,6 +399,73 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const menuButton = document.querySelector(".market-nav-toggle");
+      const menuNav = document.querySelector(".market-header-nav");
+
+      if (menuButton && menuNav) {
+        menuButton.addEventListener("click", () => {
+          const open = menuNav.classList.toggle("is-open");
+          menuButton.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!menuNav.classList.contains("is-open")) return;
+          if (menuButton.contains(event.target) || menuNav.contains(event.target)) return;
+
+          menuNav.classList.remove("is-open");
+          menuButton.setAttribute("aria-expanded", "false");
+        });
+      }
+
+      async function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(value);
+          return true;
+        }
+
+        const textarea = document.createElement("textarea");
+        textarea.value = value;
+        textarea.setAttribute("readonly", "");
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        textarea.style.pointerEvents = "none";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+
+        let copied = false;
+        try {
+          copied = document.execCommand("copy");
+        } catch (error) {
+          copied = false;
+        }
+
+        document.body.removeChild(textarea);
+        return copied;
+      }
+
+      document.querySelectorAll("[data-copy]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const value = button.getAttribute("data-copy");
+          const original = button.textContent;
+
+          try {
+            const copied = await copyText(value);
+            button.textContent = copied ? "Copied" : "Copy failed";
+          } catch (error) {
+            button.textContent = "Copy failed";
+          }
+
+          setTimeout(() => {
+            button.textContent = original;
+          }, 1200);
+        });
+      });
+    })();
+  </script>
 
 </body>
 
