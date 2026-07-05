@@ -842,3 +842,30 @@ h1 {
   font-weight: 850;
 }
 /* === end combined market risk and route note v1 === */
+
+
+/* Rabby wallet golden pill beside current CIGO contract notice */
+.market-rabby-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 198, 81, 0.78);
+  background: linear-gradient(135deg, rgba(255, 213, 94, 0.26), rgba(166, 94, 39, 0.34));
+  color: #f7d86f !important;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05) inset, 0 8px 22px rgba(0,0,0,0.28);
+}
+
+.market-rabby-pill:hover,
+.market-rabby-pill:focus {
+  transform: translateY(-1px);
+  border-color: rgba(255, 221, 112, 0.95);
+  color: #ffe79a !important;
+  text-decoration: none;
+}
