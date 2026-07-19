@@ -10,3 +10,6 @@ build/
 .env.*
 backups/
 *.tmp
+
+# Local deployment snapshots
+*.before-*
