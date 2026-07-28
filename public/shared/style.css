@@ -27,12 +27,24 @@ body {
 
 body {
   min-height: 100vh;
+  position: relative;
+  isolation: isolate;
   overflow-x: hidden;
   font-family: var(--body);
   color: var(--ink);
+  background: #080b0f;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(255, 184, 77, 0.05), rgba(255, 184, 77, 0) 18%),
-    linear-gradient(180deg, #0a0c10 0%, #0d1016 100%);
+    linear-gradient(180deg, rgba(8, 11, 15, 0.72) 0%, rgba(8, 11, 15, 0.84) 52%, rgba(8, 11, 15, 0.95) 100%),
+    radial-gradient(circle at 50% 20%, rgba(8, 11, 15, 0.08), rgba(8, 11, 15, 0.62) 78%),
+    url("/shared/cigo-background.png?v=20260728-bg1") center top / cover no-repeat;
 }
 
 a {
